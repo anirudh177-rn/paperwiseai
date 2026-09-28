@@ -4,12 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Paperwise AI - Smart Study Companion</title>
+<link rel="icon" type="image/png" href="icon.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
   body{font-family:'Inter',sans-serif;background:#0a0a0a;color:white;scroll-behavior:smooth}
   .nav{display:flex;justify-content:space-between;align-items:center;padding:20px 8%;border-bottom:1px solid #222;position:sticky;top:0;background:#0a0a0a;z-index:10}
-  .logo{font-weight:800;font-size:22px;background:linear-gradient(90deg,#7c3aed,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+  .logo{font-weight:800;font-size:22px;background:linear-gradient(90deg,#7c3aed,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:flex;align-items:center;gap:10px}
+  .logo img{width:32px;height:32px;border-radius:8px}
   .nav-links a{color:#999;text-decoration:none;margin-left:20px;font-size:14px}
   .hero{text-align:center;padding:80px 8% 40px}
   .badge{background:#1a1a1a;border:1px solid #333;padding:8px 16px;border-radius:20px;font-size:14px;display:inline-block;margin-bottom:20px}
@@ -24,7 +26,6 @@
   .card{background:#111;border:1px solid #222;padding:25px;border-radius:20px}
   .card h3{margin-bottom:10px}
   .card p{color:#888;font-size:14px}
-  /* Pricing */
   .section-title{text-align:center;font-size:36px;font-weight:800;margin-top:80px}
   .section-sub{text-align:center;color:#666;margin:10px auto 40px;max-width:500px}
   .pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;padding:0 8% 60px;max-width:1100px;margin:0 auto}
@@ -36,17 +37,14 @@
   .price-card ul{list-style:none;margin:20px 0}
   .price-card li{color:#999;font-size:14px;margin:10px 0}
   .price-card li:before{content:"✓ ";color:#7c3aed;font-weight:bold}
-  /* Contact */
   .contact{max-width:600px;margin:0 auto 80px;padding:30px;background:#111;border:1px solid #222;border-radius:24px}
   .contact input,.contact textarea{width:100%;background:#0a0a0a;border:1px solid #222;border-radius:12px;padding:14px;color:white;margin:10px 0;font-family:inherit}
   footer{text-align:center;padding:40px;color:#555;border-top:1px solid #222;margin-top:40px;font-size:13px}
 </style>
 </head>
 <body>
- <div class="nav"><div class="logo">Paperwise AI</div><div style="color:#666;font-size:14px">Bangalore,Bellandur</div></div>
-  <div class="hero">
   <div class="nav">
-    <div class="logo"> Paperwise AI</div>
+    <div class="logo"><img src="icon.png" alt="logo"> Paperwise AI</div>
     <div class="nav-links">
       <a href="#pricing">Pricing</a>
       <a href="#contact">Contact</a>
@@ -55,7 +53,7 @@
   </div>
 
   <div class="hero">
-    <div class="badge">🚀 Coming Soon ! 🚀 </div>
+    <div class="badge">🚀 Coming Soon ! 🚀</div>
     <h1>Your exams, <span class="grad">solved by AI</span></h1>
     <p>Get previous year papers, instant notes & AI answers for any question. Made for ANY students.</p>
     <div class="btns">
@@ -71,23 +69,23 @@
   </div>
 
   <h2 class="section-title" id="pricing">Simple Pricing</h2>
-  <p class="section-sub">Start free, upgrade when you need more with the best offers available. </p>
+  <p class="section-sub">Start free, upgrade when you need more with the best offers available.</p>
   <div class="pricing">
     <div class="price-card">
       <h3>Free</h3><div class="price">₹0 <span>/month</span></div>
-      <ul><li> First 10 Papers Free </li><li>Advanced AI answers</li><li>Community support</li></ul>
+      <ul><li>First 10 Papers Free</li><li>Advanced AI answers</li><li>Community support</li></ul>
       <a href="https://wa.me/91872270099?text=I%20want%20Free%20Plan" class="btn btn-secondary" style="width:100%;text-align:center">Start Free</a>
     </div>
     <div class="price-card popular">
       <div class="popular-tag">Most Popular</div>
       <h3>Pro Student</h3><div class="price">₹50 <span>/month</span></div>
       <ul><li>Unlimited Papers</li><li>Detailed AI answers with diagrams</li><li>Smart notes + summaries</li><li>WhatsApp support</li></ul>
-      <a href="https://wa.me/91872270099?text=I%20want%20Pro%20Plan%20Rs199" class="btn btn-primary" style="width:100%;text-align:center">Get Unlimited Monthly- ₹50</a>
+      <a href="https://wa.me/91872270099?text=I%20want%20Pro%20Plan%20Rs50" class="btn btn-primary" style="width:100%;text-align:center">Get Unlimited Monthly - ₹50</a>
     </div>
     <div class="price-card">
       <h3>Study Machine</h3><div class="price">₹200 <span>/year</span></div>
       <ul><li>Unlimited Papers</li><li>Many Student accounts</li><li>Smart notes + summaries</li><li>Priority support</li></ul>
-      <a href="https://wa.me/91872270099?text=I%20want%20Institute%20Plan" class="btn btn-secondary" style="width:100%;text-align:center">Get Unlimited Yearly- ₹200</a>
+      <a href="https://wa.me/91872270099?text=I%20want%20Yearly%20Plan%20Rs200" class="btn btn-secondary" style="width:100%;text-align:center">Get Unlimited Yearly - ₹200</a>
     </div>
   </div>
 
@@ -101,7 +99,7 @@
     <p style="text-align:center;color:#555;font-size:12px;margin-top:15px">Or directly message: +91 872270099</p>
   </div>
 
-  <footer>© 2026 Paperwise AI • paperwiseai.vercel.app • Made solely by Anirudh Senthur Raja </footer>
+  <footer>© 2026 Paperwise AI • paperwiseai.vercel.app • Made solely by Anirudh Senthur Raja</footer>
 
 <script>
 function sendWA(){
