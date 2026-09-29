@@ -13,7 +13,7 @@
   .logo{font-weight:800;font-size:22px;background:linear-gradient(90deg,#7c3aed,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:flex;align-items:center;gap:10px}
   .logo img{width:32px;height:32px;border-radius:8px}
   .nav-links a{color:#999;text-decoration:none;margin-left:20px;font-size:14px}
-  .location-tag{color:#888;font-size:13px;border:1px solid #333;padding:6px 12px;border-radius:20px;background:#111;margin-left:20px}
+  .location-tag{color:#888;font-size:13px;border:1px solid #333;padding:6px 12px;border-radius:20px;background:#111;margin-left:20px;white-space:nowrap}
   .hero{text-align:center;padding:80px 8% 40px}
   .badge{background:#1a1a1a;border:1px solid #333;padding:8px 16px;border-radius:20px;font-size:14px;display:inline-block;margin-bottom:20px}
   h1{font-size:56px;font-weight:800;line-height:1.1;max-width:700px;margin:0 auto 20px}
@@ -40,8 +40,9 @@
   .price-card li:before{content:"✓ ";color:#7c3aed;font-weight:bold}
   .contact{max-width:600px;margin:0 auto 80px;padding:30px;background:#111;border:1px solid #222;border-radius:24px}
   .contact input,.contact textarea{width:100%;background:#0a0a0a;border:1px solid #222;border-radius:12px;padding:14px;color:white;margin:10px 0;font-family:inherit}
-  footer{text-align:center;padding:40px;color:#555;border-top:1px solid #222;margin-top:40px;font-size:13px}
+  footer{text-align:center;padding:40px;color:#555;border-top:1px solid #222;margin-top:40px;font-size:13px;line-height:1.8}
   .visual-badge{margin-top:20px;padding:12px;background:#1a1a1a;border:1px solid #333;border-radius:12px;text-align:center;color:#888;font-weight:600;font-size:14px}
+  @media(max-width:700px){.location-tag{display:none} h1{font-size:38px} .price-card.popular{transform:scale(1)}}
 </style>
 </head>
 <body>
@@ -50,7 +51,7 @@
     <div class="nav-links" style="display:flex;align-items:center">
       <a href="#pricing">Pricing</a>
       <a href="#contact">Contact</a>
-      <a href="https://wa.me/918722700099" style="color:white">WhatsApp</a>
+      <a href="mailto:paperwise.ai@gmail.com" style="color:white">Email Us</a>
       <span class="location-tag">📍 Made in Bangalore, Bellandur</span>
     </div>
   </div>
@@ -60,7 +61,7 @@
     <h1>Your exams, <span class="grad">solved by AI</span></h1>
     <p>Get previous year papers, instant notes & AI answers for any question. Made for ANY students.</p>
     <div class="btns">
-      <a class="btn btn-primary" href="https://wa.me/918722700099?text=Hi%20Paperwise%20AI,%20I%20want%20to%20know%20more">Chat on WhatsApp</a>
+      <a class="btn btn-primary" href="mailto:paperwise.ai@gmail.com?subject=Paperwise%20AI%20Registration&body=Hi%20Paperwise%20AI,%20I%20want%20to%20register">Register via Email</a>
       <a class="btn btn-secondary" href="#pricing">View Pricing</a>
     </div>
   </div>
@@ -82,7 +83,7 @@
     <div class="price-card popular">
       <div class="popular-tag">Most Popular</div>
       <h3>Pro Student</h3><div class="price">₹50 <span>/month</span></div>
-      <ul><li>Unlimited Papers</li><li>Detailed AI answers with diagrams</li><li>Smart notes + summaries</li><li>WhatsApp support</li></ul>
+      <ul><li>Unlimited Papers</li><li>Detailed AI answers with diagrams</li><li>Smart notes + summaries</li><li>Email support</li></ul>
       <div class="visual-badge" style="background:#1f103a;border-color:#7c3aed;color:#a78bfa">₹50 / month </div>
     </div>
     <div class="price-card">
@@ -92,28 +93,38 @@
     </div>
   </div>
 
-  <h2 class="section-title" id="contact">Contact Us</h2>
-  <p class="section-sub">Have questions? We reply in 10-15 mins on WhatsApp</p>
+  <h2 class="section-title" id="contact">Contact & Registration</h2>
+  <p class="section-sub">Registration emails go to <b style="color:white">paperwise.ai@gmail.com</b> - We reply within 24 hours</p>
   <div class="contact">
     <input type="text" id="name" placeholder="Your Name">
     <input type="text" id="college" placeholder="Your College / University">
     <textarea id="msg" rows="4" placeholder="Your Message"></textarea>
-    <button class="btn btn-primary" style="width:100%;margin-top:10px" onclick="sendWA()">Send on WhatsApp</button>
-    <p style="text-align:center;color:#555;font-size:12px;margin-top:15px">Or directly message: +91 8722700099 | Made in Bangalore, Bellandur</p>
+    <button class="btn btn-primary" style="width:100%;margin-top:10px" onclick="sendEmail()">Send Registration to Email</button>
+    <a href="mailto:paperwise.ai@gmail.com" class="btn btn-secondary" style="width:100%;margin-top:10px;text-align:center;display:block">Direct Email: paperwise.ai@gmail.com</a>
+    <p style="text-align:center;color:#888;font-size:13px;margin-top:18px;line-height:1.6">
+      For registration, please email us at <b style="color:white">paperwise.ai@gmail.com</b><br>
+      People with concerns may message the Creator's number which is <b style="color:white">8722700099</b><br>
+      📍 Made in Bangalore, Bellandur
+    </p>
   </div>
 
-  <footer>© 2026 Paperwise AI • paperwiseai.vercel.app • Made solely by Anirudh Senthur Raja and my Team</footer>
+  <footer>© 2026 Paperwise AI • paperwiseai.vercel.app • Made solely by Anirudh Senthur Raja and my Team<br>📍 Made in Bangalore, Bellandur | Concerns: 8722700099</footer>
 
 <script>
-function sendWA(){
+function sendEmail(){
   let name=document.getElementById('name').value || "Not given";
   let college=document.getElementById('college').value || "Not given";
-  let msg=document.getElementById('msg').value || "Hi";
-  let rawText=`Hi Paperwise AI!
+  let msg=document.getElementById('msg').value || "Hi, I want to register for Paperwise AI";
+  let subject = `Paperwise AI Registration - ${name} from ${college}`;
+  let body = `Hi Paperwise AI Team,
+
 Name: ${name}
 College: ${college}
-Message: ${msg}`;
-  window.open(`https://wa.me/918722700099?text=${encodeURIComponent(rawText)}`, '_blank');
+Message: ${msg}
+
+Please register me.`;
+
+  window.location.href = `mailto:paperwise.ai@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 </script>
 </body>
