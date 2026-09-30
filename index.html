@@ -30,23 +30,16 @@
   .section-title{text-align:center;font-size:36px;font-weight:800;margin-top:80px}
   .section-sub{text-align:center;color:#666;margin:10px auto 40px;max-width:500px}
   .pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;padding:0 8% 60px;max-width:1100px;margin:0 auto}
-  .price-card{background:#111;border:1px solid #222;border-radius:24px;padding:30px;position:relative;display:flex;flex-direction:column}
-  .price-card.popular{border:1px solid #7c3aed;transform:scale(1.03)}
-  .popular-tag{background:white;color:black;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:700;position:absolute;top:-12px;left:50%;transform:translateX(-50%)}
+  .price-card{background:#111;border:1px solid #222;border-radius:24px;padding:30px;position:relative}
+  .price-card.popular{border:1px solid #7c3aed;transform:scale(1.05);background: radial-gradient(100% 100% at 50% 0%, #1e1b4b 0%, #111 60%);}
+  .popular-tag{background:linear-gradient(90deg,#7c3aed,#ec4899);padding:4px 12px;border-radius:20px;font-size:12px;position:absolute;top:-12px;left:50%;transform:translateX(-50%)}
   .price{font-size:40px;font-weight:800;margin:15px 0}
   .price span{font-size:14px;color:#666;font-weight:400}
-  .price-card ul{list-style:none;margin:20px 0;flex-grow:1}
+  .price-card ul{list-style:none;margin:20px 0}
   .price-card li{color:#999;font-size:14px;margin:10px 0}
   .price-card li:before{content:"✓ ";color:#7c3aed;font-weight:bold}
-  /* SIMPLE VISUAL BUTTONS */
-  .pay-btn{display:block;width:100%;text-align:center;padding:14px;border-radius:12px;text-decoration:none;font-weight:700;font-size:14px;margin-top:15px;transition:0.2s}
-  .pay-btn-free{background:transparent;border:1px solid #333;color:white}
-  .pay-btn-free:hover{background:#1a1a1a}
-  .pay-btn-pro{background:#00BAF2;color:white;border:1px solid #00BAF2}
-  .pay-btn-pro:hover{background:#00a5d6}
-  .pay-btn-year{background:white;color:black;border:1px solid white}
-  .pay-btn-year:hover{background:#e5e5e5}
-  .trust{font-size:11px;color:#666;text-align:center;margin-top:8px}
+  /* NON-CLICKABLE VISUAL BUTTONS - SAME LOOK */
+  .visual-btn{width:100%;text-align:center;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:20px;padding:14px;border-radius:14px;font-weight:700;font-size:14px;pointer-events:none;cursor:default;user-select:none}
   .contact{max-width:600px;margin:0 auto 80px;padding:30px;background:#111;border:1px solid #222;border-radius:24px}
   .contact input,.contact textarea{width:100%;background:#0a0a0a;border:1px solid #222;border-radius:12px;padding:14px;color:white;margin:10px 0;font-family:inherit}
   footer{text-align:center;padding:40px;color:#888;border-top:1px solid #222;margin-top:40px;font-size:13px;line-height:1.8}
@@ -86,28 +79,34 @@
   </div>
 
   <h2 class="section-title" id="pricing">Simple Pricing</h2>
-  <p class="section-sub">Secure payments via Paytm - UPI hidden</p>
+  <p class="section-sub">Secure payments via Paytm - Your UPI ID stays private</p>
   
   <div class="pricing">
     <div class="price-card">
       <h3>Free</h3><div class="price">₹0 <span>/month</span></div>
       <ul><li>First 10 Papers Free</li><li>Advanced AI answers</li><li>Community support</li></ul>
-      <a href="#contact" class="pay-btn pay-btn-free">Start Free →</a>
+      <!-- VISUAL ONLY - NOT CLICKABLE -->
+      <div class="visual-btn" style="background:transparent;border:1px solid #333;color:white;">Start Free →</div>
     </div>
 
     <div class="price-card popular">
-      <div class="popular-tag">Most Popular</div>
+      <div class="popular-tag">⚡ Most Popular</div>
       <h3>Pro Student</h3><div class="price">₹50 <span>/month</span></div>
       <ul><li>Unlimited Papers</li><li>Detailed AI answers with diagrams</li><li>Smart notes + summaries</li><li>Email support</li></ul>
-      <a href="https://paytm.me/YOUR-LINK-50" target="_blank" class="pay-btn pay-btn-pro">Pay ₹50 via Paytm</a>
-      <div class="trust">UPI • Cards • Wallet • Instant</div>
+      <!-- VISUAL ONLY - NOT CLICKABLE - SAME COLORS -->
+      <div class="visual-btn" style="background:linear-gradient(90deg,#00BAF2,#0084FF);color:white;box-shadow:0 0 20px rgba(0,186,242,0.4);">Pay ₹50 via Paytm</div>
+      <div style="margin-top:10px;background:#1a1a1a;border:1px solid #222;border-radius:10px;padding:8px 12px;display:flex;justify-content:space-between;">
+        <span style="font-size:11px;color:#888;">UPI • Cards • Wallet</span><span style="font-size:11px;color:#4ade80;">✓ Instant</span>
+      </div>
     </div>
 
     <div class="price-card">
       <h3>Study Machine</h3><div class="price">₹300 <span>/year</span></div>
+      <div style="background:#1a2e05;color:#a3e635;padding:4px 10px;border-radius:20px;font-size:11px;display:inline-block;margin-bottom:10px;">Save 50% - Best Value</div>
       <ul><li>Unlimited Papers</li><li>Many Student accounts</li><li>Smart notes + summaries</li><li>Priority support</li></ul>
-      <a href="https://paytm.me/YOUR-LINK-300" target="_blank" class="pay-btn pay-btn-year">Pay ₹300 / Year</a>
-      <div class="trust">Save 50% - Best Value</div>
+      <!-- VISUAL ONLY - NOT CLICKABLE - SAME COLORS -->
+      <div class="visual-btn" style="background:white;color:black;">Pay ₹300 / Year</div>
+      <p style="font-size:11px;color:#666;text-align:center;margin-top:8px">One payment for full year</p>
     </div>
   </div>
 
@@ -122,25 +121,26 @@
   </div>
 
   <h2 class="section-title" id="legal">Legal & Compliance</h2>
-  <p class="section-sub">Compliant with IT Act 2000, DPDP Act 2023</p>
+  <p class="section-sub">Compliant with IT Act 2000, DPDP Act 2023 & Paytm Merchant Policy</p>
   <div class="legal-wrap">
-    <div class="legal"><h2>Privacy Policy</h2><p>Last Updated: 30 Sept 2026. Operated by Anirudh Senthur Raja. We collect Name, College, Email, Usage Data. Data stored on Vercel/Convex Cloud. We do not sell data. Cookies used for analytics. Deletion request: paperwise.ai@gmail.com</p></div>
-    <div class="legal"><h2>Terms & Conditions</h2><p>Content is for study reference only. Must follow university integrity policy. Personal use only. No account sharing.</p></div>
-    <div class="legal"><h2>Refund & Cancellation Policy</h2><p>7-day refund if <3 generations used. If payment deducted but plan not activated, contact within 24h on +91 8722700099 or paperwise.ai@gmail.com with screenshot. Refund in 3-5 days to source Paytm account.</p></div>
-    <div class="legal"><h2>Shipping Policy (Digital)</h2><p>Digital service. No physical shipping. Plan activated within 5 mins to 2 hours after Paytm payment.</p></div>
-    <div class="legal"><h2>Contact & Grievance</h2><p>Email: paperwise.ai@gmail.com<br>Phone: +91 8722700099<br>Address: Bellandur, Bangalore - 560103</p></div>
+    <div class="legal"><h2>Privacy Policy</h2><p>Last Updated: 30 Sept 2026. Paperwise AI operated by Anirudh Senthur Raja. We collect Name, College, Email, Usage Data to provide AI study assistance. Data is stored securely on Vercel/Convex Cloud (India/Mumbai region). We do not sell, rent or expose your data. We use cookies for analytics only. You can request data deletion at paperwise.ai@gmail.com. Data retained for 1 year or till account deletion.</p></div>
+    <div class="legal"><h2>Terms & Conditions</h2><p>By using Paperwise AI you agree: Content is for study reference only. You must comply with your university academic integrity policy. Subscription is for single personal use. Sharing accounts is prohibited. We may suspend misuse. Service provided on as-is basis.</p></div>
+    <div class="legal"><h2>Refund & Cancellation Policy</h2><p>We offer 7-day refund if you have used less than 3 AI generations. If payment deducted but plan not activated, contact us within 24 hours on WhatsApp +91 8722700099 or email paperwise.ai@gmail.com with screenshot. Refund will be processed to source Paytm/Wallet/UPI within 3-5 working days. After 7 days or 3+ generations, no refund. Subscription can be cancelled anytime from email.</p></div>
+    <div class="legal"><h2>Shipping & Delivery Policy (Digital)</h2><p>Paperwise AI is a digital service. No physical shipping. Upon successful payment via Paytm, your plan is activated within 5 minutes to 2 hours. You will receive confirmation email. If not activated, contact us immediately.</p></div>
+    <div class="legal"><h2>Contact Us & Grievance Officer</h2><p>Proprietor: Anirudh Senthur Raja<br>Email: paperwise.ai@gmail.com<br>Phone/WhatsApp: +91 8722700099<br>Address: Bellandur, Bangalore, Karnataka - 560103, India<br>Grievance: For complaints, email us. Response within 24-48 hours.</p></div>
   </div>
 
   <footer>
     <div style="margin-bottom:12px">
-      <a href="#legal">Privacy</a> | <a href="#legal">Terms</a> | <a href="#legal">Refund</a> | <a href="#contact">Contact</a>
+      <a href="#legal">Privacy Policy</a> | <a href="#legal">Terms</a> | <a href="#legal">Refund Policy</a> | <a href="#legal">Shipping Policy</a> | <a href="#contact">Contact</a>
     </div>
     © 2026 Paperwise AI • paperwiseai.vercel.app • Made by Anirudh Senthur Raja and Team<br>
-    <span style="font-size:11px;color:#555">Payments secured by Paytm. No personal UPI displayed.</span>
+    Bangalore, Karnataka | Support: paperwise.ai@gmail.com | +91 8722700099<br>
+    <span style="font-size:11px;color:#555">All payments secured by Paytm. No personal UPI ID displayed. Compliant with DPDP Act 2023.</span>
   </footer>
 
   <div id="cookie" style="position:fixed;bottom:0;left:0;background:#111;color:#fff;width:100%;padding:12px;text-align:center;border-top:1px solid #333;z-index:100;font-size:13px;">
-    We use cookies. <a href="#legal" style="color:#a78bfa;">Privacy Policy</a> 
+    We use cookies to improve experience. <a href="#legal" style="color:#a78bfa;">Privacy Policy</a> 
     <button onclick="document.getElementById('cookie').style.display='none'" style="margin-left:10px;background:white;color:black;border:none;padding:6px 14px;border-radius:20px;cursor:pointer;">Accept</button>
   </div>
 
