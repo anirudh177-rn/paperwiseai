@@ -23,6 +23,8 @@
   .btn{padding:14px 28px;border-radius:30px;text-decoration:none;font-weight:600;display:inline-block;cursor:pointer;border:none;font-size:15px}
   .btn-primary{background:white;color:black}
   .btn-secondary{background:#1a1a1a;color:white;border:1px solid #333}
+  .btn-paytm{background:#00BAF2;color:white;width:100%;text-align:center;margin-top:15px;border-radius:12px}
+  .btn-paytm-dark{background:#002E6E;color:white;width:100%;text-align:center;margin-top:15px;border-radius:12px}
   .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;padding:60px 8%}
   .card{background:#111;border:1px solid #222;padding:25px;border-radius:20px}
   .card h3{margin-bottom:10px}
@@ -40,7 +42,12 @@
   .price-card li:before{content:"✓ ";color:#7c3aed;font-weight:bold}
   .contact{max-width:600px;margin:0 auto 80px;padding:30px;background:#111;border:1px solid #222;border-radius:24px}
   .contact input,.contact textarea{width:100%;background:#0a0a0a;border:1px solid #222;border-radius:12px;padding:14px;color:white;margin:10px 0;font-family:inherit}
-  footer{text-align:center;padding:40px;color:#555;border-top:1px solid #222;margin-top:40px;font-size:13px;line-height:1.8}
+  footer{text-align:center;padding:40px;color:#888;border-top:1px solid #222;margin-top:40px;font-size:13px;line-height:1.8}
+  footer a{color:#aaa;text-decoration:none;margin:0 8px}
+  footer a:hover{color:white}
+  .legal{max-width:800px;margin:60px auto;padding:30px;background:#111;border:1px solid #222;border-radius:20px;text-align:left}
+  .legal h2{margin-bottom:15px;color:white}
+  .legal p{color:#888;font-size:14px;line-height:1.6;margin-bottom:12px}
   .visual-badge{margin-top:20px;padding:12px;background:#1a1a1a;border:1px solid #333;border-radius:12px;text-align:center;color:#888;font-weight:600;font-size:14px}
   @media(max-width:700px){.location-tag{display:none} h1{font-size:38px} .price-card.popular{transform:scale(1)}}
 </style>
@@ -51,13 +58,14 @@
     <div class="nav-links" style="display:flex;align-items:center">
       <a href="#pricing">Pricing</a>
       <a href="#contact">Contact</a>
-      <a href="mailto:paperwise.ai@gmail.com" style="color:white">Email Us</a>
+      <a href="#legal">Legal</a>
+      <a href="mailto:paperwise.ai@gmail.com" style="color:white">Email</a>
       <span class="location-tag">📍 Made in Bangalore, Bellandur</span>
     </div>
   </div>
 
   <div class="hero">
-    <div class="badge">🚀 Coming Soon ! 🚀</div>
+    <div class="badge">🚀 Live Now on Paytm</div>
     <h1>Your exams, <span class="grad">solved by AI</span></h1>
     <p>Get previous year papers, instant notes & AI answers for any question. Made for ANY students.</p>
     <div class="btns">
@@ -73,24 +81,35 @@
   </div>
 
   <h2 class="section-title" id="pricing">Simple Pricing</h2>
-  <p class="section-sub">Start free, upgrade when you need more with the best offers available.</p>
+  <p class="section-sub">Start free, upgrade when you need more - Pay via Paytm UPI</p>
   <div class="pricing">
     <div class="price-card">
       <h3>Free</h3><div class="price">₹0 <span>/month</span></div>
       <ul><li>First 10 Papers Free</li><li>Advanced AI answers</li><li>Community support</li></ul>
-      <div class="visual-badge">Free Plan </div>
+      <a href="#contact" class="btn btn-secondary" style="width:100%;text-align:center;display:block;margin-top:15px;border-radius:12px">Start Free</a>
     </div>
     <div class="price-card popular">
       <div class="popular-tag">Most Popular</div>
       <h3>Pro Student</h3><div class="price">₹50 <span>/month</span></div>
       <ul><li>Unlimited Papers</li><li>Detailed AI answers with diagrams</li><li>Smart notes + summaries</li><li>Email support</li></ul>
-      <div class="visual-badge" style="background:#1f103a;border-color:#7c3aed;color:#a78bfa">₹50 / month </div>
+      <!-- REPLACE YOUR PAYTM LINK HERE -->
+      <a href="https://paytm.me/YOUR-LINK-50" target="_blank" class="btn btn-paytm">Pay ₹50 via Paytm</a>
+      <p style="font-size:11px;color:#666;text-align:center;margin-top:8px">UPI, Cards, Wallet accepted</p>
     </div>
     <div class="price-card">
       <h3>Study Machine</h3><div class="price">₹300 <span>/year</span></div>
       <ul><li>Unlimited Papers</li><li>Many Student accounts</li><li>Smart notes + summaries</li><li>Priority support</li></ul>
-      <div class="visual-badge">₹300 / year </div>
+      <!-- REPLACE YOUR PAYTM LINK HERE -->
+      <a href="https://paytm.me/YOUR-LINK-300" target="_blank" class="btn btn-paytm-dark">Pay ₹300 via Paytm</a>
+      <p style="font-size:11px;color:#666;text-align:center;margin-top:8px">Best Value - Save 50%</p>
     </div>
+  </div>
+
+  <!-- PAYTM QR SECTION -->
+  <div style="max-width:600px;margin:0 auto 60px;padding:25px;background:#111;border:1px solid #222;border-radius:20px;text-align:center">
+    <h3 style="margin-bottom:10px">Or Pay Direct via Paytm UPI</h3>
+    <p style="color:#888;font-size:14px;margin-bottom:15px">UPI ID: yourname@paytm | Scan QR below</p>
+    <p style="color:#555;font-size:12px">After payment, send screenshot to WhatsApp: 8722700099 for activation in 5 mins</p>
   </div>
 
   <h2 class="section-title" id="contact">Contact & Registration</h2>
@@ -100,15 +119,44 @@
     <input type="text" id="college" placeholder="Your College / University">
     <textarea id="msg" rows="4" placeholder="Your Message"></textarea>
     <button class="btn btn-primary" style="width:100%;margin-top:10px" onclick="sendEmail()">Send Registration to Email</button>
+    <button class="btn btn-secondary" style="width:100%;margin-top:10px" onclick="sendWA()">Chat on WhatsApp: 8722700099</button>
     <a href="mailto:paperwise.ai@gmail.com" class="btn btn-secondary" style="width:100%;margin-top:10px;text-align:center;display:block">Direct Email: paperwise.ai@gmail.com</a>
-    <p style="text-align:center;color:#888;font-size:13px;margin-top:18px;line-height:1.6">
-      For registration, please email us at <b style="color:white">paperwise.ai@gmail.com</b><br>
-      People with concerns may message the Creator's number which is <b style="color:white">8722700099</b><br>
-      .
-    </p>
   </div>
 
-  <footer>© 2026 Paperwise AI • paperwiseai.vercel.app • Made solely by Anirudh Senthur Raja and my Team<br> Made in Bangalore, Bellandur | Concerns: 8722700099</footer>
+  <!-- LEGAL SECTION - REQUIRED FOR PROPER WEBSITE -->
+  <div id="legal">
+    <div class="legal">
+      <h2>Privacy Policy</h2>
+      <p>Last updated: 30 Sept 2026. Paperwise AI collects Name, College, Email to provide service. Data stored securely on Vercel/Convex. We do not sell data. You can request deletion via paperwise.ai@gmail.com. We use cookies for analytics.</p>
+    </div>
+    <div class="legal">
+      <h2>Terms & Conditions</h2>
+      <p>Content generated by Paperwise AI is for study reference only. Users must follow their university academic integrity policy. Subscription is for personal use only. One account per user.</p>
+    </div>
+    <div class="legal">
+      <h2>Refund Policy</h2>
+      <p>7-day refund if you used less than 3 generations. If payment deducted but plan not activated, contact us within 24h on WhatsApp 8722700099 or paperwise.ai@gmail.com. Refund to source Paytm/UPI within 3-5 working days.</p>
+    </div>
+    <div class="legal">
+      <h2>Contact & Grievance</h2>
+      <p>Email: paperwise.ai@gmail.com | Phone: +91 8722700099 | Address: Bangalore, Bellandur, Karnataka - 560103 | Proprietor: Anirudh Senthur Raja</p>
+    </div>
+  </div>
+
+  <footer>
+    <div style="margin-bottom:15px">
+      <a href="#legal">Privacy Policy</a> | <a href="#legal">Terms</a> | <a href="#legal">Refund Policy</a> | <a href="#contact">Contact Us</a>
+    </div>
+    © 2026 Paperwise AI • paperwiseai.vercel.app • Made solely by Anirudh Senthur Raja and Team<br>
+    Made in Bangalore, Bellandur | Support: paperwise.ai@gmail.com | 8722700099<br>
+    <span style="font-size:11px;color:#555">This website complies with IT Act 2000 & DPDP Act 2023. All payments secured by Paytm.</span>
+  </footer>
+
+  <!-- COOKIE CONSENT - MANDATORY -->
+  <div id="cookie" style="position:fixed; bottom:0; left:0; background:#111; color:#fff; width:100%; padding:12px; text-align:center; border-top:1px solid #333; z-index:100; font-size:13px;">
+    We use cookies to improve experience. <a href="#legal" style="color:#a78bfa;">Privacy Policy</a> 
+    <button onclick="document.getElementById('cookie').style.display='none'" style="margin-left:10px; background:white; color:black; border:none; padding:6px 14px; border-radius:20px; cursor:pointer;">Accept</button>
+  </div>
 
 <script>
 function sendEmail(){
@@ -123,8 +171,15 @@ College: ${college}
 Message: ${msg}
 
 Please register me.`;
-
   window.location.href = `mailto:paperwise.ai@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+function sendWA(){
+  let name=document.getElementById('name').value || "";
+  let college=document.getElementById('college').value || "";
+  let msg=document.getElementById('msg').value || "Hi, I want to register for Paperwise AI";
+  let text = `Hi Paperwise AI! Name: ${name}, College: ${college}, Message: ${msg}`;
+  let phone = "918722700099"; // 91 + your number
+  window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, '_blank');
 }
 </script>
 </body>
